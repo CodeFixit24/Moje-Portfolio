@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Narzędzie do Tworzenia Logo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container-fluid">
+        <ul>
+          <li><strong>Narzędzie do Logo</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">Start</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#" role="button">Stwórz Logo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container grid">
+      <section id="logo-preview-section" class="split-left">
+        <h2>Podgląd Logo</h2>
+        <div id="logo-preview"></div>
+      </section>
+
+      <section id="options-section" class="split-right">
+        <h2>Opcje Tworzenia Logo</h2>
+        <form id="logoForm">
+          <label for="logoText">Tekst logo:</label>
+          <input
+            type="text"
+            id="logoText"
+            name="logoText"
+            placeholder="Wprowadź tekst"
+            required
+          />
+
+          <label for="iconSelect">Wybierz ikonę:</label>
+          <select id="iconSelect">
+            <option value="fa-star">Gwiazdka</option>
+            <option value="fa-heart">Serce</option>
+            <option value="fa-bolt">Piorun</option>
+            <option value="fa-tree">Drzewo</option>
+            <option value="fa-car">Samochód</option>
+            <option value="fa-plane">Samolot</option>
+            <option value="fa-music">Muzyka</option>
+          </select>
+
+          <label for="fontSize">Rozmiar czcionki:</label>
+          <input
+            type="range"
+            id="fontSize"
+            name="fontSize"
+            min="10"
+            max="100"
+            value="30"
+          />
+
+          <label for="color">Kolor logo:</label>
+          <input type="color" id="color" name="color" value="#e60000" />
+
+          <label for="fontFamily">Czcionka:</label>
+          <select id="fontFamily">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+          </select>
+
+          <button type="button" id="resetLogo">Resetuj</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="container">
+      <small
+        ><a href="#">Kontakt</a> • <a href="#">Polityka Prywatności</a></small
+      >
+    </footer>
+
+    <script src="skryptlogo.js"></script>
+  </body>
+</html>

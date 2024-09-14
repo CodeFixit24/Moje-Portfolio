@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page Customizer</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="wyglad.css" />
+  </head>
+  <body>
+    <!-- Sidebar menu for options -->
+    <div id="sidebarMenu">
+      <h3>Opcje</h3>
+      <button id="addNewSection" class="btn-block">Dodaj Sekcję</button>
+      <button id="addNewHeader" class="btn-block">Dodaj Nagłówek</button>
+      <button id="addNewImage" class="btn-block">Dodaj Obraz</button>
+      <button id="addNewFooter" class="btn-block">Dodaj Stopkę</button>
+      <button id="customizePage" class="btn-block">Otwórz Customizer</button>
+    </div>
+
+    <!-- Main editor area -->
+    <div id="editorArea">
+      <section class="editable-element">Pierwsza sekcja strony</section>
+      <header class="editable-element"><h1>Przykładowy Nagłówek</h1></header>
+      <img
+        class="editable-element"
+        src="https://via.placeholder.com/800x400"
+        alt="Placeholder Image"
+      />
+      <footer class="editable-element">Stopka strony</footer>
+    </div>
+
+    <!-- Customizer Panel -->
+    <div id="customizer" class="hidden">
+      <h3>Personalizacja</h3>
+      <div class="customizer-content">
+        <label for="bgColor">Tło Strony:</label>
+        <input type="color" id="bgColor" value="#ffffff" />
+
+        <label for="textColor">Kolor Tekstu:</label>
+        <input type="color" id="textColor" value="#000000" />
+
+        <label for="headerColor">Kolor Nagłówka:</label>
+        <input type="color" id="headerColor" value="#000000" />
+
+        <label for="headerFontSize">Rozmiar Czcionki Nagłówka:</label>
+        <input type="number" id="headerFontSize" value="32" />
+
+        <label for="textFontSize">Rozmiar Czcionki Tekstu:</label>
+        <input type="range" id="textFontSize" min="10" max="50" value="16" />
+      </div>
+      <button id="closeCustomizer">Zamknij</button>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="skryptedit.js"></script>
+  </body>
+</html>
